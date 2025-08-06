@@ -1,35 +1,41 @@
 {
-    "Mario": {
+    "mario": {
+        "nome": "Mario",
         "velocidade": 4,
         "manobrabilidade": 3,
         "poder": 3
     },
 
-    "Bowser": {
+    "bowser": {
+        "nome":"Bowser",
         "velocidade": 5,
         "manobrabilidade": 2,
         "poder": 5
     },
 
-    "Peach": {
+    "peach": {
+        "nome": "Peach",
         "velocidade": 3,
         "manobrabilidade": 4,
         "poder": 2
     },
 
-    "Luigi": {
+    "luigi": {
+        "nome": "Lougi",
         "velocidade": 3,
         "manobrabilidade": 4,
         "poder": 4
     },
 
-    "Yosh": {
+    "yosh": {
+        "nome": "Yosh",
         "velocidade": 2,
         "manobrabilidade": 4,
         "poder": 3
     },
 
-    "Donkey Kong": {
+    "donkey kong": {
+        "nome": "Donkey Kong",
         "velocidade": 2,
         "manobrabilidade": 2,
         "poder": 5
