@@ -14,6 +14,6 @@ exports.rolagemDadoPista = () => {
     if(rolagem <= 3){
         return rolagem;
     } else{
-        return rolagem - 3;
+        return Math.floor(rolagem / 3);
     }
 }
