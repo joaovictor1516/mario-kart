@@ -1,0 +1,13 @@
+{
+    "reta": {
+        "atributo": "velocidade"
+    },
+
+    "curva": {
+        "atributo": "manobrabilidade"
+    },
+
+    "confronto": {
+        "atributo": "poder"
+    }
+}
