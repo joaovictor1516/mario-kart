@@ -13,7 +13,7 @@ exports.jogador = class Jogador {
     }
 
     checaPotosMinimos(){
-        let checaPontos = this.pontos - 1 
+        const checaPontos = this.pontos - 1 
         if(checaPontos < 0){
             return false;
         } else{
