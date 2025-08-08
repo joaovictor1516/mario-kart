@@ -1,4 +1,4 @@
-exports.rolagemDadoAtrinuto = () => {
+exports.rolagemDadoAtributo = () => {
     const rolagem = 1 + Math.floor(Math.random() * 10);
 
     if(rolagem <= 6){
