@@ -13,8 +13,25 @@ exports.jogador = class Jogador {
     }
 
     checaPotosMinimos(){
-        if(this.pontos < 0){
-            this.pontos = 0;
+        let checaPontos = this.pontos - 1 
+        if(checaPontos < 0){
+            return false;
+        } else{
+            return true;
         }
     };
+
+    perdePonto(){
+        if(this.checaPotosMinimos()){
+            this.pontos -= 1;
+        }
+    };
+
+    ganhaPonto(){
+        this.pontos += 1;
+    }
+
+    checaPontos(){
+        console.log(this.pontos);
+    }
 }
