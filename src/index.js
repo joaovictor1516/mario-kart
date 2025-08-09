@@ -20,4 +20,4 @@ const dadoAtributo = dado.rolagemDadoAtributo();
 
 const dadoPista = dado.rolagemDadoPista();
 
-console.log(Object.entries(pistas)[dadoPista - 1][1].atributo, dadoPista);
+console.log(Object.entries(pistas)[dadoPista][1].atributo, dadoPista);
