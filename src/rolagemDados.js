@@ -9,11 +9,16 @@ exports.rolagemDadoAtributo = () => {
 }
 
 exports.rolagemDadoPista = () => {
-    const rolagem = 1 + Math.floor(Math.random() * 10);
+    const rolagem = Math.floor(Math.random() * 10);
 
-    if(rolagem <= 3){
+    if(rolagem <= 2){
         return rolagem;
     } else{
-        return Math.floor(rolagem / 3);
+        const novaRolagem = Math.floor(rolagem / 2);
+        if(novaRolagem > 2){
+            return Math.floor(novaRolagem/2);
+        } else{
+            return novaRolagem;
+        }
     }
 }
