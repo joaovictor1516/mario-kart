@@ -16,8 +16,55 @@ const jogador1 = new Jogador.jogador(personagemJogador1.nome, personagemJogador1
 
 const jogador2 = new Jogador.jogador(personagemJogador2.nome, personagemJogador2.poder, personagemJogador2.velocidade, personagemJogador2.manobrabilidade);
 
-const dadoAtributo = dado.rolagemDadoAtributo();
+const dadoAtributo = dado.rolagemDadoAtributo;
 
-const dadoPista = dado.rolagemDadoPista();
+const dadoPista = dado.rolagemDadoPista;
 
-console.log(Object.entries(pistas)[dadoPista][1].atributo, dadoPista);
+const listaPistas = Object.entries(pistas);
+
+for(let rodada = 0; rodada <= 5; rodada++){
+    const pista = listaPistas[dadoPista()];
+
+    const pistaNome = pista[0];
+
+    const pistaAtributo = pista[1].atributo;
+
+    const valorRolagemAtributoJogador1 = dadoAtributo();
+
+    const valorRolagemAtributoJogador2 = dadoAtributo();
+
+    const valorTotalAtributoJogador1 = jogador1[pistaAtributo] + valorRolagemAtributoJogador1;
+
+    const valorTotalAtributoJogador2 = jogador2[pistaAtributo] + valorRolagemAtributoJogador2;
+
+    const resultadoConfronto = valorTotalAtributoJogador1 - valorTotalAtributoJogador2;
+
+    switch(pistaNome){
+        case "curva":
+        case "pista":
+            if(resultadoConfronto > 0){
+                jogador1.ganhaPonto();
+            } else if(resultadoConfronto < 0){
+                jogador2.ganhaPonto();
+            }
+            break;
+        case "confronto":
+            if(resultadoConfronto > 0){
+                jogador2.perdePonto();
+            } else if(resultadoConfronto < 0){
+                jogador1.perdePonto();
+            }
+            break;
+    };
+
+    console.log("===========================================");
+    console.log(`Informações da rodada ${rodada}:`);
+    console.log(`Pista sortiada: ${pistaNome}`);
+    console.log(`Atributo que será comparado: ${pistaAtributo}`);
+    console.log(`Personagem do jogador 1: ${jogador1.nome}`);
+    console.log(`Valor do ${pistaAtributo} do ${jogador1.nome}: ${jogador1[pistaAtributo]}`);
+    console.log(`Personagem do jogador 2: ${jogador2.nome}`);
+    console.log(`Valor do ${pistaAtributo} do ${jogador2.nome}: ${jogador2[pistaAtributo]}`);
+    console.log("===========================================");
+
+}
