@@ -29,9 +29,9 @@ exports.jogador = class Jogador {
 
     ganhaPonto(){
         this.pontos += 1;
-    }
+    };
 
     checaPontos(){
         console.log(this.pontos);
-    }
+    };
 }
