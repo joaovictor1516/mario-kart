@@ -22,6 +22,8 @@ const dadoPista = dado.rolagemDadoPista;
 
 const listaPistas = Object.entries(pistas);
 
+console.log(`🏁 Corrida entre ${jogador1.nome} e ${jogador2.nome} começando.`)
+
 for(let rodada = 0; rodada <= 5; rodada++){
     const pista = listaPistas[dadoPista()];
 
@@ -58,13 +60,16 @@ for(let rodada = 0; rodada <= 5; rodada++){
     };
 
     console.log("===========================================");
-    console.log(`Informações da rodada ${rodada}:`);
+    console.log(`🏁 Rodada ${rodada}:`);
     console.log(`Pista sortiada: ${pistaNome}`);
     console.log(`Atributo que será comparado: ${pistaAtributo}`);
     console.log(`Personagem do jogador 1: ${jogador1.nome}`);
     console.log(`Valor do ${pistaAtributo} do ${jogador1.nome}: ${jogador1[pistaAtributo]}`);
+    console.log(`🎲 Rolagem do ${jogador1.nome} foi ${valorRolagemAtributoJogador1} logo seu resultado final foi de ${valorTotalAtributoJogador1}`);
     console.log(`Personagem do jogador 2: ${jogador2.nome}`);
     console.log(`Valor do ${pistaAtributo} do ${jogador2.nome}: ${jogador2[pistaAtributo]}`);
+    console.log(`🎲 Rolagem do ${jogador2.nome} foi ${valorRolagemAtributoJogador2} logo seu resultado final foi de ${valorTotalAtributoJogador2}`);
     console.log("===========================================");
-
 }
+
+console.log(`O ${jogador1.pontos > jogador2.pontos ? jogador1.nome : jogador2.nome} venceu 🏆!`);
